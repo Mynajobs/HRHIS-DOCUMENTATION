@@ -24,6 +24,12 @@ module.exports = {
           position: "left",
         },
         {
+          to: "docs/",
+          activeBasePath: "docs",
+          label: "User",
+          position: "left",
+        },
+        {
           href: "https://github.com/hisptz/hris-api-docs",
           label: "GitHub",
           position: "right",
