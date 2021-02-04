@@ -1,40 +1,46 @@
 module.exports = {
-  title: 'HRHIS',
-  tagline: 'Documentation for collection, collation, storage of Human resource for health Information software.',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'src/img/favicon.png',
-  organizationName: 'hisptz', // Usually your GitHub org/user name.
-  projectName: 'hris-api-docs', // Usually your repo name.
+  title: "HRHIS",
+  tagline:
+    "Documentation for collection, collation, storage of Human resource for health Information software.",
+  url: "https://hisptz.github.io/hris-api-docs/",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "src/img/favicon.png",
+  organizationName: "hisptz", // Usually your GitHub org/user name.
+  projectName: "hris-api-docs", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'HRHIS',
+      title: "HRHIS",
       logo: {
-        alt: 'HRHIS Logo',
-        src: 'src/img/favicon.png',
+        alt: "HRHIS Logo",
+        src: "src/img/favicon.png",
       },
       items: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
-          label: 'Developer',
-          position: 'left',
+          to: "docs/",
+          activeBasePath: "docs",
+          label: "Developer",
+          position: "left",
         },
-        {to: 'blog', label: 'User', position: 'left'},
         {
-          href: 'https://github.com/hisptz/hris-api-docs',
-          label: 'GitHub',
-          position: 'right',
+          to: "user/",
+          label: "User",
+          position: "left",
+          activeBasePath: "user",
+        },
+        {
+          href: "https://github.com/hisptz/hris-api-docs",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'GitHub',
+          title: "GitHub",
           items: [
             /*
             {
@@ -48,8 +54,9 @@ module.exports = {
           ],
         },
         {
-          title: 'Contact',
-          items: [/*
+          title: "Contact",
+          items: [
+            /*
             {
               label: 'Stack Overflow',
               href: 'https://stackoverflow.com/questions/tagged/docusaurus',
@@ -70,22 +77,20 @@ module.exports = {
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/hisptz/hris-api-docs/edit/master/website/',
+          editUrl: "https://github.com/hisptz/hris-api-docs/",
         },
-        blog: {
+        user: {
           showReadingTime: true,
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/hisptz/hris-api-docs/edit/master/website/blog/',
+          editUrl: "https://github.com/hisptz/hris-api-docs/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       },
     ],
