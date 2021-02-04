@@ -33,7 +33,7 @@ email | Contact person's address | NO | String
 
 <br />
 
-### Adding OrganisationUnits
+## Adding OrganisationUnits
 <br />
 
 > New Organisationunits in the system can be added to the list of organisationunits. `NOTE:` All Organisationunits containt a unique `code`
@@ -73,12 +73,16 @@ email | Contact person's address | NO | String
 `Endpoint`
 
 ```JS
-/api/system/id //This generates one ID
+/api/system/id
 ```
+* This generates one ID
+<br />
 
 ```JS
-/api/system/id?limit=4 //This generates a list of 4 IDs. 
+/api/system/id?limit=4 
 ```
+* This generates a list of 4 IDs. 
+<br />
 > Limit can be defined for a desired number of IDS
 
 `Response`
@@ -92,7 +96,7 @@ email | Contact person's address | NO | String
   ]
 }
 ```
-## Adding organisationUnit with specified ID
+### Adding organisationUnit with specified ID
 `Payload`
 
 ```JSON
@@ -124,6 +128,8 @@ email | Contact person's address | NO | String
 > A child organisationUnit can be added to a list contain a parent to that child. 
 * These can be added by including the `parent ID` or `parent code`
 
+ #### Adding with parent ID
+
 `Endpoint`
 ```JS
 /api/organisationUnits
@@ -138,7 +144,7 @@ email | Contact person's address | NO | String
     "shortName": "Region",
     "active": true,
     "parent": {
-        "id":"R1LrM6EgpZFO4" // Or Parent Code if ID is unknown
+        "id":"R1LrM6EgpZFO4"
     }
 }
 ```
@@ -166,27 +172,69 @@ email | Contact person's address | NO | String
   }
 }
 ```
+ #### Adding with parent CODE
+`Endpoint`
+```JS
+/api/organisationUnits
+```
+
+`Payload`
+```JSON
+{
+    "code": "REGION",
+    "name": "The Region",
+    "description": "The Region Details",
+    "shortName": "Region",
+    "active": true,
+    "parent": {
+        "id":"MOHCDGEC0"
+    }
+}
+```
+`Reponse`
+```JSON
+{
+  "id": "Kehdpt5FnIb2N",
+  "created": "2020-12-23T09:06:21.000Z",
+  "lastUpdated": "2020-12-23T09:06:21.000Z",
+  "code": "REGION",
+  "name": "The Region",
+  "description": "The Region Details",
+  "shortName": "Region",
+  "active": true,
+  "parent": {
+    "id": "R1LrM6EgpZFO4",
+    "created": "2020-12-23T07:23:54.000Z",
+    "lastUpdated": "2020-12-23T07:23:54.000Z",
+    "code": "MOHCDGEC0",
+    "name": "Ministry Of Health",
+    "description": "Ministry of Health and Social welfare",
+    "shortName": "MOHCDGEC",
+    "active": true
+  }
+}
+```
 
 `Response On Failure`
-> When posting fails, responses will differ depending on what caused the failure as follows:-
+* When posting fails, responses will differ depending on what caused the failure as follows:- <br />
 1. Failure due to duplicates on unique organisationUnit properties <br />
-    `Response` 
-    ```JSON
+`Response` 
+```JSON
         {
           "error": "duplicate key value violates unique constraint \"<Constraint name/identifier>\""
         }   
-    ```
+```
 2. Missing Required Properties <br />
 `Response` 
-    ```JSON
+```JSON
         {
           "error": "null value in column \"<Required Property>\" violates not-null constraint"
         }  
-    ```
+```
 
-### Get a list of OrganisationUnits
+## Get a list of OrganisationUnits
 
-> A list of OrganisationUnits includes all levels of organisationunits in the system including, Regions, Districts, Facilities and all other levels.
+* A list of OrganisationUnits includes all levels of organisationunits in the system including, Regions, Districts, Facilities and all other levels.
 
 `Endpoint`
 
@@ -207,7 +255,7 @@ email | Contact person's address | NO | String
   },
   "organisationUnits": [
    {
-      "id": "52893cd1b8359",
+      "id": "zlubCRjvcGJ1b",
       "created": "2013-11-17T22:01:53.000Z",
       "lastUpdated": "2017-11-07T13:01:47.000Z",
       "code": "MOHCDGEC",
@@ -216,10 +264,10 @@ email | Contact person's address | NO | String
       "shortName": "MOHCDGEC",
       "active": true,
       "level": 1,
-      "path": "/52893cd1b8359"
+      "path": "/zlubCRjvcGJ1b"
     },
     {
-      "id": "52893cd1ba0a8",
+      "id": "Xm7iba5dFpuZF",
       "created": "2013-11-17T22:01:53.000Z",
       "lastUpdated": "2013-11-17T22:01:53.000Z",
       "code": "referralhosps",
@@ -228,9 +276,9 @@ email | Contact person's address | NO | String
       "shortName": "referralhosps",
       "active": true,
       "level": 2,
-      "path": "/52893cd1b8359/52893cd1ba0a8",
+      "path": "/zlubCRjvcGJ1b/Xm7iba5dFpuZF",
       "parent": {
-        "id": "52893cd1b8359",
+        "id": "zlubCRjvcGJ1b",
         "created": "2013-11-17T22:01:53.000Z",
         "lastUpdated": "2017-11-07T13:01:47.000Z",
         "code": "MOHCDGEC",
@@ -239,7 +287,7 @@ email | Contact person's address | NO | String
         "shortName": "MOHCDGEC",
         "active": true,
         "level": 1,
-        "path": "/52893cd1b8359"
+        "path": "/zlubCRjvcGJ1b"
       }
     }]
 }
@@ -247,19 +295,19 @@ email | Contact person's address | NO | String
 
 ### Get One OrganisationUnit By ID
 
-> Details of one OrganisationUnit can retrieved by passing the ID of that OrganisationUnit if available in the system (/api/organisationUnits/ID)
+* Details of one OrganisationUnit can retrieved by passing the ID of that OrganisationUnit if available in the system (/api/organisationUnits/ID)
 
 `Endpoint`
 
 ```JS
-/api/organisationUnits/52893cd1b8359
+/api/organisationUnits/zlubCRjvcGJ1b
 ```
 
 `Response`
 
 ```JSON
 {
-  "id": "52893cd1b8359",
+  "id": "zlubCRjvcGJ1b",
   "created": "2013-11-17T22:01:53.000Z",
   "lastUpdated": "2017-11-07T13:01:47.000Z",
   "code": "MOHCDGEC",
@@ -268,15 +316,15 @@ email | Contact person's address | NO | String
   "shortName": "MOHCDGEC",
   "active": true,
   "level": 1,
-  "path": "/52893cd1b8359"
+  "path": "/zlubCRjvcGJ1b"
 }
 ```
 
 ### Filter OrganisationUnits
 
-> Filtering of OrganisationUnits is performed by passing any property of the OrganisationUnits in the structure of the [Endpoint](#endpoint).
+* Filtering of OrganisationUnits is performed by passing any property of the OrganisationUnits in the structure of the endpoint below.
 
-## Endpoint 
+`Endpoint` 
 
 ```JS
 /api/organisationUnits?filter=shortName:eq:MOHCDGEC
@@ -295,7 +343,7 @@ email | Contact person's address | NO | String
   },
   "organisationUnits": [
     {
-      "id": "52893cd1b8359",
+      "id": "zlubCRjvcGJ1b",
       "created": "2013-11-17T22:01:53.000Z",
       "lastUpdated": "2017-11-07T13:01:47.000Z",
       "code": "MOHCDGEC",
@@ -304,7 +352,7 @@ email | Contact person's address | NO | String
       "shortName": "MOHCDGEC",
       "active": true,
       "level": 1,
-      "path": "/52893cd1b8359"
+      "path": "/zlubCRjvcGJ1b"
     }
   ]
 }
@@ -323,8 +371,8 @@ email | Contact person's address | NO | String
 }
 ```
 
-## Get only desired fields
-> Organisationunits endpoint can be filtered to only include fields you might want to use.
+### Get only desired fields
+* Organisationunits endpoint can be filtered to only include fields you might want to use.
 
 `Endpoint`
 ```JS
@@ -342,14 +390,14 @@ email | Contact person's address | NO | String
   },
   "organisationUnits": [
     {
-      "id": "52893cd1b8359",
+      "id": "zlubCRjvcGJ1b",
       "name": "Ministry Of Health"
     },
     {
-      "id": "52893cd1ba0a8",
+      "id": "Xm7iba5dFpuZF",
       "name": "Referral Hospitals",
       "parent": {
-        "id": "52893cd1b8359",
+        "id": "zlubCRjvcGJ1b",
         "created": "2013-11-17T22:01:53.000Z",
         "lastUpdated": "2017-11-07T13:01:47.000Z",
         "code": "MOHCDGEC",
@@ -358,7 +406,7 @@ email | Contact person's address | NO | String
         "shortName": "MOHCDGEC",
         "active": true,
         "level": 1,
-        "path": "/52893cd1b8359"
+        "path": "/zlubCRjvcGJ1b"
       }
     }]
 }
@@ -366,24 +414,28 @@ email | Contact person's address | NO | String
 ```
 
 ## Updating OrganisationUnits
-> Updating an organisationUnit can be performed in two ways
-1. Updating with organisationUnit `ID` if one has access to it. <br />
-    `Endpoint` 
-    ```JS
-    /api/organisationUnits/52893cd1ba0a8  //where 52893cd1ba0a8 is the organisationUnit ID
-    ```
-    `Sample Payload`
-    ```JSON
+* Updating an organisationUnit can be performed in two ways
+
+###  Updating with ID.
+`Endpoint` 
+```JS
+    /api/organisationUnits/Xm7iba5dFpuZF 
+```
+* Where Xm7iba5dFpuZF is the organisationUnit ID
+<br />
+
+`Sample Payload`
+```JSON
     {      
       "name": "Referral Hospitals in Tanzania"
     }
-    ```
-    `Response`
-    ```JSON
+```
+`Response`
+```JSON
         {
-      "message": "Item with id 52893cd1ba0a8 updated successfully.",
+      "message": "Item with id Xm7iba5dFpuZF updated successfully.",
       "payload": {
-        "id": "52893cd1ba0a8",
+        "id": "Xm7iba5dFpuZF",
         "created": "2013-11-17T22:01:53.000Z",
         "lastUpdated": "2020-12-24T11:37:08.000Z",
         "code": "referralhosps",
@@ -392,30 +444,31 @@ email | Contact person's address | NO | String
         "shortName": "referralhosps",
         "active": true,
         "level": 2,
-        "path": "/52893cd1b8359/52893cd1ba0a8"
+        "path": "/zlubCRjvcGJ1b/Xm7iba5dFpuZF"
       }
     }
-   ```
-2. Updating with organisationUnit `code`. <br />
+```
+### Updating with code
 
-    `Endpoint` 
-    ```JS
-    /api/organisationUnits/MOHCDGEC  //where MOHCDGEC is the organisationUnit code.
-    ```
+`Endpoint` 
+```JS
+    /api/organisationUnits/MOHCDGEC 
+```
+* Where MOHCDGEC is the organisationUnit code.
+<br />
+`Sample Payload`
 
-    `Sample Payload`
-
-    ```JSON
+```JSON
     {      
        "name": "Ministry Of Health (MOHCDGEC)""
     }
-    ```
-    `Response`
-    ```JSON
+```
+`Response`
+```JSON
        {
           "message": "Item with code MOHCDGEC updated successfully.",
           "payload": {
-          "id": "52893cd1b8359",
+          "id": "zlubCRjvcGJ1b",
           "created": "2013-11-17T22:01:53.000Z",
           "lastUpdated": "2020-12-24T13:05:09.000Z",
           "code": "MOHCDGEC",
@@ -424,57 +477,67 @@ email | Contact person's address | NO | String
           "shortName": "MOHCDGEC",
           "active": true,
           "level": 1,
-          "path": "/52893cd1b8359"
+          "path": "/zlubCRjvcGJ1b"
       }
      } 
-   ```
+```
 ## Deleting organisationUnit
-> Deleting organisationUnit can be done in two ways like updating depending on what the user has access to. `NOTE:` To avoid orphans in deleting organisationUnits, deleting does not cascade so if you want to delete a parent, make sure it does not have any children.
-1. Deleting with organisationUnit `ID` if one has access to it. <br />
-   `Endpoint`
-    ```JS
-    /api/organisationUnits/52c9be7d6eb0d  //where 52c9be7d6eb0d is the organisationUnit ID
-    ```
-    `Response`
-    ```JSON
+* Deleting organisationUnit can be done in two ways like updating depending on what the user has access to. `NOTE:` To avoid orphans in deleting organisationUnits, deleting does not cascade so if you want to delete a parent, make sure it does not have any children.
+
+### Deleting with organisationUnit id.
+
+`Endpoint`
+```JS
+    /api/organisationUnits/DDAVHQaLekWBt
+```
+* Where `DDAVHQaLekWBt` is the organisationUnit ID
+ <br />
+
+`Response`
+```JSON
           {
-          "message": "Object with id 52c9be7d6eb0d deleted successfully",
+          "message": "Object with id DDAVHQaLekWBt deleted successfully",
           "payload": {
-          "id": "52c9be7d6eb0d",
+          "id": "DDAVHQaLekWBt",
           "created": "2014-01-05T23:20:13.000Z",
           "lastUpdated": "2020-05-18T11:32:06.000Z",
-          "code": "108577-8",
+          "code": "OUCODE",
           "name": "Aga Khan Health Center",
           "shortName": "Aga Khan Health Center",
           "active": true,
           "openingDate": "1899-12-31",
           "coordinates": "[36.68944,-3.37077]",
           "level": 5,
-          "path": "/52893cd1b8359/52893cd1ba688/52c9be76ee331/52c9be77b8514/52c9be7d6eb0d"
+          "path": "/zlubCRjvcGJ1b/52893cd1ba688/52c9be76ee331/52c9be77b8514/DDAVHQaLekWBt"
         }
       }
-    ```
-2. Deleting with organisationUnit `code` if one has access to it. <br />
-    `Endpoint`
-    ```JS
-     /api/organisationUnits/52c9be7d6eb0d  //where 108577-8 is the organisationUnit CODE
-    ```
-    `Response`
-    ```JSON
+```
+
+### Deleting with organisationUnit code.
+
+`Endpoint`
+```JS
+     /api/organisationUnits/OUCODE
+```
+* Where OUCODE is the organisationUnit CODE
+ <br />
+
+`Response`
+```JSON
           {
-          "message": "Object with code 108577-8 deleted successfully",
+          "message": "Object with code OUCODE deleted successfully",
           "payload": {
-          "id": "52c9be7d6eb0d",
+          "id": "DDAVHQaLekWBt",
           "created": "2014-01-05T23:20:13.000Z",
           "lastUpdated": "2020-05-18T11:32:06.000Z",
-          "code": "108577-8",
+          "code": "OUCODE",
           "name": "Aga Khan Health Center",
           "shortName": "Aga Khan Health Center",
           "active": true,
           "openingDate": "1899-12-31",
           "coordinates": "[36.68944,-3.37077]",
           "level": 5,
-          "path": "/52893cd1b8359/52893cd1ba688/52c9be76ee331/52c9be77b8514/52c9be7d6eb0d"
+          "path": "/zlubCRjvcGJ1b/52893cd1ba688/52c9be76ee331/52c9be77b8514/DDAVHQaLekWBt"
         }
       }
-    ```
+```
