@@ -1,6 +1,6 @@
 module.exports = {
   menuSidebar: {
-    HRHIS: ['ou', 'doc2', 'doc3'],
+    HRHIS: ['ou', 'records'],
     //Features: ['mdx'],
   },
 };

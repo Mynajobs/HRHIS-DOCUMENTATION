@@ -1,6 +1,6 @@
 module.exports = {
   title: 'HRHIS',
-  tagline: 'The tagline of HRHIS',
+  tagline: 'Documentation for collection, collation, storage of Human resource for health Information software.',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
