@@ -9,7 +9,7 @@ import styles from "./styles.module.css";
 const features = [
   {
     title: "Usage",
-    imageUrl: "src/img/favicon.png",
+    imageUrl: "img/favicon.png",
     description: (
       <>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -24,7 +24,7 @@ const features = [
   },
   {
     title: "Focus on What Matters",
-    imageUrl: "src/img/favicon.png",
+    imageUrl: "img/favicon.png",
     description: (
       <>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -39,7 +39,7 @@ const features = [
   },
   {
     title: "Developed To Serve",
-    imageUrl: "src/img/favicon.png",
+    imageUrl: "img/favicon.png",
     description: (
       <>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
