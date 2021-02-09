@@ -3,7 +3,7 @@ module.exports = {
   tagline:
     "Documentation for collection, collation, storage of Human resource for health Information software.",
   url: "https://hisptz.github.io/hris-api-docs/",
-  baseUrl: "/",
+  baseUrl: "/hris-api-docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.png",
