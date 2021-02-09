@@ -501,7 +501,7 @@ email | Contact person's address | NO | String
           "id": "DDAVHQaLekWBt",
           "created": "2014-01-05T23:20:13.000Z",
           "lastUpdated": "2020-05-18T11:32:06.000Z",
-          "code": "OUCODE",
+          "code": "19D90-10",
           "name": "Aga Khan Health Center",
           "shortName": "Aga Khan Health Center",
           "active": true,
@@ -517,20 +517,20 @@ email | Contact person's address | NO | String
 
 `Endpoint`
 ```JS
-     /api/organisationUnits/OUCODE
+     /api/organisationUnits/19D90-10
 ```
-* Where OUCODE is the organisationUnit CODE
+* Where 19D90-10 is the organisationUnit CODE
  <br />
 
 `Response`
 ```JSON
           {
-          "message": "Object with code OUCODE deleted successfully",
+          "message": "Object with code 19D90-10 deleted successfully",
           "payload": {
           "id": "DDAVHQaLekWBt",
           "created": "2014-01-05T23:20:13.000Z",
           "lastUpdated": "2020-05-18T11:32:06.000Z",
-          "code": "OUCODE",
+          "code": "19D90-10",
           "name": "Aga Khan Health Center",
           "shortName": "Aga Khan Health Center",
           "active": true,
