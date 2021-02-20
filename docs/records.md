@@ -25,38 +25,45 @@ sidebar_label: Records
   "message": "Duplicate Records",
   "records": [
       {
-      "field": "5289e93499515",
+      "field": "b2fkEQgzJdbhF",
       "name": "Check Number",
       "duplicates": [
         {
-          "id": "558a700e04a56",
+          "id": "BPlMPfo553ch5",
           "recordValues": [
              {
-              "field": "5289e93496216",
+               "id": "nuDEzu4NBeL2Z",
+              "field": "iKJDfOQmtw2qp",
               "value": "form four"
             },
             {
-              "field": "5289e9349dde1",
+              "id": "eTnrhDx2E45EG",
+              "field": "lJNeQk2bTNQl5",
               "value": "jdjjd"
             },
-          ]
+          ],
+          "organisationunit": "zRgNXkU7Yef6L"
         },
         {
-          "id": "5c9415cce9fcd",
+          "id": "SspS99jTdRbn8",
           "recordValues": [
            {
-              "field": "5289e9349dde1",
+             "id":"kmfZvkYLiOWVu",
+              "field": "nTw32YiWJtwhl",
               "value": "jdjjd"
             },
             {
-              "field": "5289e9349f037",
+              "id":"ezFEgOAnPWNvs",
+              "field": "tRPYrDlb1n79w",
               "value": "ndnndf"
             },
             {
-              "field": "5289e934a027b",
+              "id":"E7NeVciipvtMv",
+              "field": "lWDS8Rwg70G9I",
               "value": "nam"
             }
-          ]
+          ],
+          "organisationunit": "PXXhx3rjw6ebx"
         }
       ]
     }
@@ -78,7 +85,9 @@ sidebar_label: Records
 ```JS
 /api/records/merge
 ```
+
 `Method:` POST
+
 ### Scenario One || Based on Records
 
 `Payload`
@@ -98,12 +107,15 @@ sidebar_label: Records
 
 ```JSON
 {
+  "organisationUnit":"XJpzOmbg7LuL6",
+  "form": "iJUMeqloMjmDq",
   "recordValues": [
-      {"id": "jJBwwcYa1kBzQ"}, 
-      {"id": "jJBwwcYa1kBzQ"}, 
-      {"id": "jJBwwcYa1kBzQ"}
+      {"id": "jJBwwcYa1kBzQ"},
+      {"id": "fEbTGVMKVLUTU"},
+      {"id": "nlG8zObKlkMcx"}
       ],
   "remove":["yxd7nZx3dExX9","ephzmm10i8Olc"]
 }
 ```
-> Where `recordValues` represents an array of all recordvalue ids for all fields to create a new record and `remove` represents an array of record ids to delete
+
+> Where organisationUnit represents and form represents the parameters of the new record to create `recordValues` represents an array of all recordvalue ids for all fields to create a new record and `remove` represents an array of record ids to delete
