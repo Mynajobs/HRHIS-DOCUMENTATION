@@ -1,114 +1,66 @@
 import React from "react";
-import clsx from "clsx";
-import Layout from "@theme/Layout";
-import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
-import styles from "./styles.module.css";
+import Link from "@docusaurus/Link";
+import Layout from "@theme/Layout";
 
-const features = [
-  {
-    title: "Usage",
-    imageUrl: "img/favicon.png",
-    description: (
-      <>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-      occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-      mollit anim id est laborum.
-      </>
-    ),
-  },
-  {
-    title: "Focus on What Matters",
-    imageUrl: "img/favicon.png",
-    description: (
-      <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </>
-    ),
-  },
-  {
-    title: "Developed To Serve",
-    imageUrl: "img/favicon.png",
-    description: (
-      <>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </>
-    ),
-  },
-];
-
-function Feature({ imageUrl, title, description }) {
-  const imgUrl = useBaseUrl(imageUrl);
+function Hero() {
+  const context = useDocusaurusContext();
+  const { siteConfig = {} } = context;
   return (
-    <div className={clsx("col col--4", styles.feature)}>
-      {imgUrl && (
-        <div className="text--center">
-          <img className={styles.featureImage} src={imgUrl} alt={title} />
+    <header className="hero">
+      <div className="container margin-vert--lg">
+        <h1 className="hero__title">{siteConfig.title}</h1>
+        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <Link
+          to={useBaseUrl("docs/users/introduction")}
+          className="button button--primary button--outline button--lg"
+        >
+          Get Started
+        </Link>
+        <div className="button button--link">
+          <iframe
+            src="https://ghbtns.com/github-btn.html?user=BaharaJr&repo=api-docs&type=star&count=true&size=large"
+            frameBorder="0"
+            scrolling="0"
+            width="160px"
+            height="30px"
+          ></iframe>
         </div>
-      )}
-      <h3>{title}</h3>
-      <p>{description}</p>
+      </div>
+    </header>
+  );
+}
+
+function Feature({ title, children, color = "primary" }) {
+  const h2 = "text";
+  return (
+    <div className="col">
+      <h2 className={"text--center text--" + color} style={{ color }}>
+        {title}
+      </h2>
+      <p className="text--justify">{children}</p>
     </div>
   );
 }
 
-function Home() {
-  const context = useDocusaurusContext();
-  const { siteConfig = {} } = context;
+function Body() {
   return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />"
-    >
-      <header className={clsx("hero hero--primary", styles.heroBanner)}>
-        <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx(
-                "button button--outline button--secondary button--lg",
-                styles.getStarted
-              )}
-              to={useBaseUrl("docs/")}
-            >
-              View
-            </Link>
-          </div>
-        </div>
-      </header>
-      <main>
-        {features && features.length > 0 && (
-          <section className={styles.features}>
-            <div className="container">
-              <div className="row">
-                {features.map((props, idx) => (
-                  <Feature key={idx} {...props} />
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-      </main>
-    </Layout>
+    <main className="container">
+      <div className="row margin-vert--xl">
+        <Feature title="Convenient"></Feature>
+        <Feature title="Safe" color="#BA00AC"></Feature>
+        <Feature title="Powerful" color="#00B100"></Feature>
+      </div>
+    </main>
   );
 }
 
-export default Home;
+export default function Home() {
+  return (
+    <Layout>
+      <Hero />
+      <Body />
+    </Layout>
+  );
+}

@@ -1,0 +1,59 @@
+{
+  "docs": {
+    "User Manual": [
+      "users/introduction",
+      {
+        "type": "category",
+        "label": "Features",
+        "items": [
+          "users/user/user",
+          "users/health-worker/healthworker",
+          "users/import-export/import-export",
+          "users/data-quality/data-quality",
+          "users/worker-portal/portal",
+          "users/reports/report",
+          "users/dashboard/dashboard",
+          "users/maintenance/maintenance",
+          "users/data-administration/admin",
+          "users/scheduler/scheduler",
+          "users/messaging/message"
+        ]
+      }
+    ],
+    "Web API": [
+      "developers/basics",
+      {
+        "type": "category",
+        "label": "Metadata Guide",
+        "items": [
+          "developers/metadata/forms",
+          "developers/metadata/ou",
+          "developers/metadata/indicators"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Data Guide",
+        "items": [
+          "developers/data/records",
+          "developers/data/analytics",
+          "developers/data/dashboards",
+          "developers/data/reports",
+          "developers/data/datastore"
+        ]
+      },
+      {
+        "type": "category",
+        "label": "Settings Guide",
+        "items": [
+          "developers/settings/users",
+          "developers/settings/settings",
+          "developers/settings/notifications",
+          "developers/settings/processes",
+          "developers/settings/logs",
+          "developers/settings/apps"
+        ]
+      }
+    ]
+  }
+}

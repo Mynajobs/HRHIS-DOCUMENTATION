@@ -6,27 +6,27 @@ module.exports = {
   baseUrl: "/hris-api-docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
-  favicon: "img/favicon.png",
+  favicon: "images/favicon.png",
   organizationName: "hisptz", // Usually your GitHub org/user name.
   projectName: "hris-api-docs", // Usually your repo name.
   themeConfig: {
     navbar: {
       title: "HRHIS",
+      hideOnScroll: false,
+      //style: "primary",
       logo: {
         alt: "HRHIS Logo",
-        src: "img/favicon.png",
+        src: "images/favicon.png",
       },
       items: [
         {
-          to: "docs/",
-          activeBasePath: "docs",
-          label: "Developer",
+          to: "docs/users/introduction",
+          label: "User Manual",
           position: "left",
         },
         {
-          to: "docs/",
-          activeBasePath: "docs",
-          label: "User",
+          to: "docs/developers/basics",
+          label: "Developer",
           position: "left",
         },
         {
@@ -38,41 +38,19 @@ module.exports = {
     },
     footer: {
       style: "dark",
-      links: [
-        {
-          title: "GitHub",
-          items: [
-            /*
-            {
-              label: 'Style Guide',
-              to: 'docs/',
-            },
-            {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
-            },*/
-          ],
-        },
-        {
-          title: "Contact",
-          items: [
-            /*
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },*/
-          ],
-        },
-      ],
       copyright: `Copyright © ${new Date().getFullYear()} UDSM-DHIS2`,
+    },
+    respectPrefersColorScheme: true,
+    switchConfig: {
+      darkIcon: "🌚",
+    },
+    announcementBar: {
+      id: "info",
+      content:
+        "Discover the power of HRHIS through user and developer documentation",
+      backgroundColor: "light-green",
+      textColor: "white",
+      isCloseable: false,
     },
   },
   presets: [
@@ -80,14 +58,8 @@ module.exports = {
       "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
+          sidebarPath: require.resolve("./sidebars.json"),
           editUrl: "https://github.com/hisptz/hris-api-docs/blob/main/",
-        },
-        user: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl: "https://github.com/hisptz/hris-api-docs/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
