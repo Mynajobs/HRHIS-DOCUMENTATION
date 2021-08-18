@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>HRHIS Blog</title>
-        <link>https://hisptz.github.io/hris-api-docs/blog</link>
+        <link>https://udsm-dhis2-project.github.io/hris-api-docs/blog</link>
         <description>HRHIS Blog</description>
         <lastBuildDate>Sun, 25 Oct 2015 23:29:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
