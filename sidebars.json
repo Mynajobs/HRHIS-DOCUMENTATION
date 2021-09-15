@@ -53,6 +53,11 @@
           "developers/settings/logs",
           "developers/settings/apps"
         ]
+      },
+      {
+        "type":"category",
+        "label":"Data",
+        "items":["developers/data/dashboards"]
       }
     ]
   }

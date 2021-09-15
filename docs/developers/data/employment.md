@@ -3,35 +3,50 @@ id: records
 title: Records Module
 sidebar_label: Records
 ---
-### Record viewing API
+## Council Records Module.
 
-## Get Employees Records.
+This module allows viewing and analyzing of information from health practitioners registration councils. These are records from health professional registration councils including professionals expected to register but are not registered.
 
-`Endpoint`
-
-```JS
-/api/records/duplicates/hshD7171OpG
-```
-- Where `hshD7171OpG` is the form id.
-- You can also pass the page size of data you want as:-
-  ```JS
-  /api/records/duplicates/hshD7171OpG?pageSize=300
-  ```
-  - Where `pageSize=300` is the query for a page of size 300 items.
+### Viewing registered proffessionals
 
 `Method:` GET
 
 `Payload`
 
 ```JSON
- {
-"pager": {
-"page": 1,
-"pageSize": 50,
-"pageCount": 0,
-"total": 0,
-"nextPage": "/api/records?page=2"
-},
-"records": []
+{
+"id": "fbzalEYFM9a7O",
+"name": "Registration",
+"title": "Registration",
+"formSections": [],
+"formFieldMembers": [
+{
+"id": "vRLD9O4I91T6R",
+"created": "2021-09-06T22:46:35.215Z",
+"lastUpdated": "2021-09-06T22:46:35.215Z",
+"fieldid": "140",
+"formid": "40",
+"sort": 1,
+"isPinned": false,
+"showInList": true,
+"compulsory": false,
+"searchable": true,
+"field": {
+"id": "5289e934ab062",
+"created": "2013-11-18T07:17:24.000Z",
+"lastUpdated": "2013-11-18T07:17:24.000Z",
+"name": "firstname",
+"description": "Compulsory, Employee`s Firstname.",
+"caption": "First Name",
+"compulsory": true,
+"isUnique": false,
+"isCalculated": false,
+"hasHistory": false,
+"datatype": "String",
+"fieldOptions": []
+}
 }
 ```
+|Element|Description|Type|Notes|
+|----|----|----|-----|
+

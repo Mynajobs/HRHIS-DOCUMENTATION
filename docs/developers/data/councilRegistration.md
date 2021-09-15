@@ -56,6 +56,8 @@ where `fbzalEYFM9a7O` is the form id.
 }
 }
 ```
+### Payload description
+
 The fields in the responses are described below.
 
 |Element|Description|Type|Notes|
