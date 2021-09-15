@@ -1,7 +1,7 @@
 ---
-id: employeerecords
-title: Employee Records Module
-sidebar_label: Records
+id: API Introduction
+title: HRHIS API Introduction
+sidebar_label: Introduction to HRHIS APIs
 ---
 
 ## Introduction to HRHIS APIs 

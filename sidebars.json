@@ -39,7 +39,15 @@
           "developers/data/analytics",
           "developers/data/dashboards",
           "developers/data/reports",
-          "developers/data/datastore"
+          "developers/data/datastore",
+          "developers/data/Data quality",
+          "developers/data/Education records",
+          "developers/data/Import-Export",
+          "developers/data/Scheduler",
+          "developers/data/councils",
+          "developers/data/reports",
+          "developers/employeerecords",
+          "developers/data/Data administration"
         ]
       },
       {
@@ -56,8 +64,8 @@
       },
       {
         "type":"category",
-        "label":"Data",
-        "items":["developers/data/dashboards"]
+        "label":"HRHIS API Intro",
+        "items":["API Introduction"]
       }
     ]
   }
