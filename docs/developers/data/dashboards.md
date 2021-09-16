@@ -4,7 +4,9 @@ sidebar_label: Dashboard
 ---
 ## Dashboard Module.
 
-This module allows viewing and analyzing of information from health practitioners registration councils. These are records from health professional registration councils including professionals expected to register but are not registered.
+This module allows visualizing the trend of data in the system. The dashboard includes graphs and charts for visualy displaying data. major functions in the dashboard are adding dashboards, viewing, adding dashboard elements, updating dashboards and deleting dashboards.
+
+###  Adding dashboards
 
 ### Dashboard
 
@@ -49,3 +51,10 @@ This module allows viewing and analyzing of information from health practitioner
 |Element|Description|Type|Notes|
 |----|----|----|-----|
 
+###  Viewing dashboards
+
+###  Adding dashboard
+
+###  Updating dashboards
+
+###  Deleting dashboards

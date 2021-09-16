@@ -7,9 +7,9 @@ sidebar_label: Scheduler
 
 ## Scheduler Module.
 
-This module allows viewing and analyzing of information from health practitioners registration councils. These are records from health professional registration councils including professionals expected to register but are not registered.
+This module allows synchronization of data from all systems that supply data into HRHIS. There are three major functions in this module i.e. schedule management, process management and.
 
-### Data Import Processes
+### Schedule management
 
 `Method:` GET
 
@@ -52,5 +52,6 @@ This module allows viewing and analyzing of information from health practitioner
 |Element|Description|Type|Notes|
 |----|----|----|-----|
 
+### Process management
 
 

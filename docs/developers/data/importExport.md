@@ -7,9 +7,17 @@ sidebar_label: Import/Export
 
 ## Import/Export Module.
 
-This module allows viewing and analyzing of information from health practitioners registration councils. These are records from health professional registration councils including professionals expected to register but are not registered.
+This module allows manual data entry and retrieval in the system. Manual data entry and retrieval is done based on templates  that can be downloaded from the system. The templates are categorized based on the forms used to capture data in the system and have same data fields as those existing in the forms. 
 
-### Data Import P
+### Data Import Process
+
+Data importation involves a series of actions such as downloading import template, choosing data import file, importing data. The following are the requests and respons associated with each process.
+
+#### Downloading data import template
+
+### Data Export Process
+
+Data exportation involves a series of actions such as selecting an organization unit, selecting a data export form and downloading exported data.The following are the requests and respons associated with each process.
 
 `Method:` GET
 
@@ -51,3 +59,6 @@ This module allows viewing and analyzing of information from health practitioner
 ```
 |Element|Description|Type|Notes|
 |----|----|----|-----|
+
+#### Choosing a data import file
+#### Importing data

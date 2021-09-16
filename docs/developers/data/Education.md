@@ -5,7 +5,7 @@ sidebar_label: Education Records
 ---
 ## Education Records Module.
 
-This module allows viewing and analyzing of information from health practitioners registration councils. These are records from health professional registration councils including professionals expected to register but are not registered.
+This module allows viewing and analyzing of information from health training institutions recognized by NACTE and TCU. 
 
 ### Viewing current students records
 
@@ -49,3 +49,5 @@ To show students who are currently enrolled in health training institutions. Stu
 ```JSON
 
 ```
+
+### Viewing students reports
