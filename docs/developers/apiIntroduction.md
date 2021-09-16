@@ -1,10 +1,10 @@
 ---
-id: API Introduction
+id: api-introduction
 title: HRHIS API Introduction
 sidebar_label: Introduction to HRHIS APIs
 ---
 
-## Introduction to HRHIS APIs 
+## Introduction to HRHIS APIs
 
 The HRHIS API is organized around. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
 
@@ -19,7 +19,6 @@ URL:
 
     /api/me
 
-
 ### Basic Authentication
 
 <!--HRHIS-SECTION-ID:webapi_basic_authentication-->
@@ -27,26 +26,26 @@ URL:
 Basic authentication
 is a technique for clients to send login credentials over HTTP to a web
 server. The username is appended with a colon and respective password, Base64-encoded, prefixed Basic and supplied as the value
-of the *Authorization* HTTP header. More formally that is:
+of the _Authorization_ HTTP header. More formally that is:
 
     Authorization: Basic base64encode(username:password)
-    
-Most network-aware development environments provide support for Basic 
-authentication, such as *Apache HttpClient* and *Spring RestTemplate*. 
-An important note is that this authentication scheme provides no security 
-since the username and password are sent in plain text and can be easily 
-observed by an attacker. Using Basic is recommended only if the server is 
-using SSL/TLS (HTTPS) to encrypt communication with clients. Consider this 
-a hard requirement in order to provide secure interactions with the Web 
+
+Most network-aware development environments provide support for Basic
+authentication, such as _Apache HttpClient_ and _Spring RestTemplate_.
+An important note is that this authentication scheme provides no security
+since the username and password are sent in plain text and can be easily
+observed by an attacker. Using Basic is recommended only if the server is
+using SSL/TLS (HTTPS) to encrypt communication with clients. Consider this
+a hard requirement in order to provide secure interactions with the Web
 API.
 
 ### OAuth2
 
 <!--HRHIS4-SECTION-ID:webapi_oauth2-->
 
-HRHIS supports the *OAuth2* authentication protocol. OAuth2 is an open
+HRHIS supports the _OAuth2_ authentication protocol. OAuth2 is an open
 standard for authorization which allows third-party clients to
-connect on behalf of a HRHIS4 user and get a reusable *bearer token* for
+connect on behalf of a HRHIS4 user and get a reusable _bearer token_ for
 subsequent requests to the Web API. HRHIS4 does not support fine-grained
 OAuth2 roles but rather provides applications access based on user roles
 of the HRHIS4 user.
@@ -54,6 +53,7 @@ of the HRHIS4 user.
 All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
 
 ## Errors
+
 HRHIS uses conventional HTTP response codes to indicate the success or failure of an API request. In general: Codes in the 2xx range indicate success. Codes in the 4xx range indicate an error that failed given the information provided (e.g.Unauthorized, Forbidden, Method Not Allowed, Request Timeout etc.). Codes in the 5xx range indicate an error with HRHIS' servers (these are rare).
 
 ```
@@ -123,36 +123,45 @@ HRHIS uses conventional HTTP response codes to indicate the success or failure o
   '511': 'Network Authentication Required',
 }
 ```
+
 Some 4xx errors that could be handled programmatically (e.g. Bad Request, Payload Too Large) include an error code that briefly explains the error reported.
 
 ### Attributes
+
 #### type
+
 string
 The type of error returned. One of api_error, or invalid_request_error
 
 #### code
+
 string
 For some errors that could be handled programmatically, a short string indicating the error code reported.
 
 #### decline_code
+
 string
 
-
 #### message
+
 string
 A human-readable message providing more details about the error. For ..., these messages can be shown to your users.
 
 #### param
+
 string
 If the error is parameter-specific, the parameter related to the error. For example, you can use this to display a message near the correct form field.
 
 ### Handling errors
+
 Our Client libraries raise exceptions for many reasons, such as invalid parameters, authentication errors, and network unavailability. We recommend writing code that gracefully handles all possible API exceptions.
 
 ### Expanding Responses
+
 Many objects allow you to request additional information as an expanded response by using the expand request parameter. This parameter is available on all API requests, and applies to the response of that request only. Responses can be expanded in two ways.
 
 ### Metadata
+
 Updateable HRHIS objects—including Account, Forms, Fields, Field options, Organization units have a metadata parameter. You can use this parameter to attach key-value data to these Stripe objects.
 
 You can specify up to 50 keys, with key names up to 40 characters long and values up to 500 characters long.
@@ -164,11 +173,13 @@ Some of the objects listed above also support a description parameter. You can u
 Do not store any sensitive information (bank account numbers, card details, etc.) as metadata or in the description parameter.
 
 ### Pagination
+
 All top-level API resources have support for bulk fetches via "list" API methods. For instance, you can list records, list something , and list something. These list API methods share a common structure, taking at least these three parameters: limit, starting_after, and ending_before.
 
 HRHIS utilizes cursor-based pagination via the starting_after and ending_before parameters. Both parameters take an existing object ID value (see below) and return objects in reverse chronological order. The ending_before parameter returns objects listed before the named object. The starting_after parameter returns objects listed after the named object. These parameters are mutually exclusive -- only one of starting_after orending_before may be used.
 
 #### Parameters
+
 limit
 optional, default is 10
 A limit on the number of objects to be returned, between 1 and 100.
@@ -201,4 +212,3 @@ The URL for accessing this list.
 ### Request IDs
 
 Each API request has an associated request identifier. You can find this value in the response headers, under Request-Id. You can also find request identifiers in the URLs of individual request logs in your Dashboard. If you need to contact us about a specific request, providing the request identifier will ensure the fastest possible resolution.
-
