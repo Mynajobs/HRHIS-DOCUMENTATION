@@ -1,5 +1,5 @@
 ---
-id: Education records
+id: education-records
 title: Education Records Module
 sidebar_label: Education Records
 ---

@@ -1,5 +1,5 @@
 ---
-id: records
+id: record
 title: Records Module
 sidebar_label: Records
 ---
@@ -160,7 +160,7 @@ JSON is supported in this format:
 ```json
 {
   "form": { "id": "formID" },
-  "organisationUnit": { "id": "orgUnitID" }, 
+  "organisationUnit": { "id": "orgUnitID" },
   // or we can use code in the format, organisationUnit: { "code": "orgUnitCODE" }
   "recordValues": [
     {
