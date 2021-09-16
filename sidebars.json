@@ -36,7 +36,6 @@
         "type": "category",
         "label": "Data Guide",
         "items": [
-          "developers/data/records",
           "developers/data/analytics",
           "developers/data/dashboards",
           "developers/data/reports",
@@ -47,7 +46,8 @@
           "developers/data/Scheduler",
           "developers/data/councils",
           "developers/data/reports",
-          "developers/data/data-administration"
+          "developers/data/data-administration",
+          "developers/data/record"
         ]
       },
       {
