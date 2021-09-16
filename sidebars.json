@@ -61,14 +61,11 @@
           "developers/settings/logs",
           "developers/settings/apps"
         ]
-<<<<<<< HEAD
       },
       {
         "type":"category",
         "label":"HRHIS API Intro",
         "items":["API Introduction"]
-=======
->>>>>>> ce98fedf302c0398d22786762773a78f8ec21882
       }
     ]
   }
