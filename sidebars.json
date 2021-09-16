@@ -40,14 +40,13 @@
           "developers/data/dashboards",
           "developers/data/reports",
           "developers/data/datastore",
-          "developers/data/Data quality",
-          "developers/data/Education records",
+          "developers/data/data-quality",
+          "developers/data/education-records",
           "developers/data/Import-Export",
           "developers/data/Scheduler",
           "developers/data/councils",
           "developers/data/reports",
-          "developers/data/records",
-          "developers/data/Data administration"
+          "developers/data/data-administration"
         ]
       },
       {

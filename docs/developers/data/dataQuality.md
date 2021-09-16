@@ -1,5 +1,5 @@
 ---
-id: Data quality
+id: data-quality
 title: Data quality Module
 sidebar_label: Data quality
 ---
