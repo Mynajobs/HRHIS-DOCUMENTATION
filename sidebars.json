@@ -46,7 +46,7 @@
           "developers/data/Scheduler",
           "developers/data/councils",
           "developers/data/reports",
-          "developers/records",
+          "developers/data/records",
           "developers/data/Data administration"
         ]
       },
@@ -66,7 +66,7 @@
         "type": "category",
         "label": "HRHIS API Intro",
         "items": [
-          "api-introduction"
+          "developers/api-introduction"
         ]
       }
     ]
