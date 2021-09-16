@@ -22,6 +22,7 @@
     ],
     "Web API": [
       "developers/basics",
+      "developers/apiIntroduction"
       {
         "type": "category",
         "label": "Metadata Guide",
