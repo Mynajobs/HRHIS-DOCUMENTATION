@@ -6,7 +6,7 @@ sidebar_label: Council Records
 
 ## Council Records Module.
 
-This module allows viewing and analyzing of information from health practitioners registration councils. These are records from health professional registration councils including professionals who were expected to register but are not registered.
+This module allows viewing and analyzing of information from health practitioners registration councils. These are records from health professional registration councils including professionals who were expected to register but are not registered in any council registration system.
 
 ### Viewing registered proffessionals
 
@@ -131,3 +131,4 @@ where `fbzalEYFM9a7O` is the form id
 }
 }
 ``` 
+### Viewing Council registration reports
