@@ -58,3 +58,19 @@ This module allows visualizing the trend of data in the system. The dashboard in
 ###  Updating dashboards
 
 ###  Deleting dashboards
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
