@@ -24,7 +24,11 @@ Aggregate records Fetching data in record modules follow similar sequence of act
 
 ## Fetching  listing records
 
-A default endpoint for fetching
+`Method:`
+
+GET
+
+A default endpoint for fetching records
 
 `api/analytics/records/KwTlfYKlSCcEd?pageSize=50&page=1&ouMode=DESCENDANTS&listing=true`
 
@@ -202,7 +206,7 @@ Operators  <eq, !eq, in, !in>
 |!in|Fetch records with many search items where items do not exist IN records for the given dimension
 |
 
-Fetching a single record
+### Fetching a single record
 
 You can also search for a single record as described below
 

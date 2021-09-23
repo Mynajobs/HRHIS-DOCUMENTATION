@@ -23,6 +23,10 @@ Aggregate records Fetching data in record modules follow similar sequence of act
 
 ## Fetching  listing records
 
+`Method:`
+
+GET
+
 A default endpoint for fetching
 
 `api/analytics/records/KwTlfYKlSCcEd?pageSize=50&page=1&ouMode=DESCENDANTS&listing=true`
