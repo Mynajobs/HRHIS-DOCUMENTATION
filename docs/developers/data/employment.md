@@ -3,9 +3,10 @@ id: records
 title: Records Module
 sidebar_label: Records
 ---
+
 ## Record Modules
 
-In HRHIS there are three modules that mainly hold different types of records i.e. Employment records, Council records and Education Records. 
+In HRHIS there are three modules that mainly hold different types of records i.e. Employment records, Council records and Education Records.
 
 ## Introduction
 
@@ -17,11 +18,11 @@ What it generally offer
 
 A record API contains HTTP status code and data returned.
 
-## Fetching  
+## Fetching
 
 Aggregate records Fetching data in record modules follow similar sequence of actions as described below.
 
-## Fetching  listing records
+## Fetching listing records
 
 `Method:`
 
@@ -37,11 +38,11 @@ By default the page size is 50, but you can change the page size by setting the 
 
 You can also get all records for viewing without pagination by simply setting paging = 'false'.
 
-|Parameter|Description|Type|Notes|
-|----|----|----|-----|
-|PageSize|Number of item per page|number|by default it is 50|
-|Page|Page number (offset)|number||
-|Paging|specifies whether to use paging or not||when false (all records)are returned as response|
+| Parameter | Description                            | Type   | Notes                                            |
+| --------- | -------------------------------------- | ------ | ------------------------------------------------ |
+| PageSize  | Number of item per page                | number | by default it is 50                              |
+| Page      | Page number (offset)                   | number |                                                  |
+| Paging    | specifies whether to use paging or not |        | when false (all records)are returned as response |
 
 Sample Data payload.
 
@@ -187,30 +188,29 @@ The fields in the responses are described below.
 |page|Number|1|Page number||
 |paging|Boolean|true||Specify whether to do pagination or not
 
-
-
-`false`:  Fetch All record
+`false`: Fetch All record
 
 `true`: Fetch record given pagination options
 
 Searching parameters
-Dimension <fields>
-Operators  <eq, !eq, in, !in>
+Dimension `<fields>`
+Operators `<eq, !eq, in, !in>`
 
-|Operator|Description
-|----|----|
-|eq|Fetch records where search item has EXACT MATCH for the given dimension|
-|!eq|Fetch records where search item has NO MATCH for the given dimension|
-|in|Fetch records with many search items where items exist IN records for the given dimension|
-|!in|Fetch records with many search items where items do not exist IN records for the given dimension
+| Operator | Description                                                                                      |
+| -------- | ------------------------------------------------------------------------------------------------ |
+| eq       | Fetch records where search item has EXACT MATCH for the given dimension                          |
+| !eq      | Fetch records where search item has NO MATCH for the given dimension                             |
+| in       | Fetch records with many search items where items exist IN records for the given dimension        |
+| !in      | Fetch records with many search items where items do not exist IN records for the given dimension |
+
 |
 
 Fetching a single record
 
 You can also search for a single record as described below
 
-`Endpoint;` 
+`Endpoint;`
 
-``/api/records/pbD8mdbEY8lLT?fields=id,organisationUnit[id,organisationUnitGroups],form,recordValues[field]``
+`/api/records/pbD8mdbEY8lLT?fields=id,organisationUnit[id,organisationUnitGroups],form,recordValues[field]`
 
 Specify field to get the record
