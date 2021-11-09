@@ -2,7 +2,7 @@ module.exports = {
   title: "HRHIS",
   tagline:
     "Documentation for collection, collation, storage of Human resource for health Information software.",
-  url: "https://udsm-dhis2-project.github.io/hris-api-docs/",
+  url: "https://udsm-dhis2-project.github.io",
   baseUrl: "/hris-api-docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
