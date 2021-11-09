@@ -12,7 +12,7 @@ In HRHIS there are three modules that mainly hold different types of records i.e
 
 What is record API?
 
-A record API is the messenger that delivers a request to the provider from which it is being requested and then delivers the response(records) back.
+A record API is the messenger that delivers a request to the provider from which it is being requested and then delivers the response (records) back.
 
 What it generally offer
 
