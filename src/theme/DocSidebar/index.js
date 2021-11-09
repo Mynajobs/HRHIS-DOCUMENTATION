@@ -10,7 +10,7 @@ import { useThemeConfig, isSamePath } from '@docusaurus/theme-common';
 import useUserPreferencesContext from '@theme/hooks/useUserPreferencesContext';
 import useLockBodyScroll from '@theme/hooks/useLockBodyScroll';
 import useWindowSize, { windowSizes } from '@theme/hooks/useWindowSize';
-import useScrollPosition from '@theme/hooks/useScrollPosition';
+// import useScrollPosition from '@theme/hooks/useScrollPosition';
 import Link from '@docusaurus/Link';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import Logo from '@theme/Logo';
@@ -168,9 +168,9 @@ function DocSidebar({
   const {
     isAnnouncementBarClosed
   } = useUserPreferencesContext();
-  const {
-    scrollY
-  } = useScrollPosition();
+  // const {
+  //   scrollY
+  // } = useScrollPosition();
   useLockBodyScroll(showResponsiveSidebar);
   const windowSize = useWindowSize();
   useEffect(() => {
@@ -185,7 +185,8 @@ function DocSidebar({
       {hideOnScroll && <Logo tabIndex={-1} className={styles.sidebarLogo} />}
       <div className={clsx('menu', 'menu--responsive', 'thin-scrollbar', styles.menu, {
       'menu--show': showResponsiveSidebar,
-      [styles.menuWithAnnouncementBar]: !isAnnouncementBarClosed && scrollY === 0
+      [styles.menuWithAnnouncementBar]: !isAnnouncementBarClosed 
+      //&& scrollY === 0
     })}>
         <button aria-label={showResponsiveSidebar ? 'Close Menu' : 'Open Menu'} aria-haspopup="true" className="button button--secondary button--sm menu__button" type="button" onClick={() => {
         setShowResponsiveSidebar(!showResponsiveSidebar);
