@@ -7,6 +7,8 @@ sidebar_label: Introduction
   
 The HRHIS was implemented as an effort to improve human resources for health (HRH) management.A situation analysis indicated the existence of several databases within and outside the ministry dealing with HRH, often with similar information fields. It was agreed these sources should be harmonized, and housed under Health Management Information System (HMIS) for consistency. The HRHIS software thus became part of the HMIS and was fully developed using the District Health Information System (DHIS) software.
 
+The HRHIS has gone through a long process of improvements in all aspects such as technologically, performance. Currently, we have an improved HRHIS system with more features and better performance. 
+
 The HRHIS provides input/output mechanisms for data at different levels, such as national,
 regional, district or facility level. It is designed to provide flexibility to:
 
@@ -33,7 +35,7 @@ Functions in HRHIS are groped into different modules/apps for easier organizatio
 
 - Health worker data
 
-- import/export
+- Import/export
 
 - Data quality
 
@@ -53,7 +55,7 @@ Functions in HRHIS are groped into different modules/apps for easier organizatio
 
 ### **Accessing HRHIS** ###
 
-HRHIS system is available via the [Web](https://hrhis.dhis2udsm.org/). Type `https://hrhis.dhis2udsm.org/` in the address bar/search bar of a web browser(an application used to access the internet such as Internet Explorer, Mozilla Firefox, Google Chrome, Opera, etc.) to access HRHIS login screen provided that you are connected to the Internet.
+HRHIS system is available via the [Web](https://hrhis.moh.go.tz/). Type `hrhis.moh.go.tz` in the address bar/search bar of a web browser(an application used to access the internet such as Internet Explorer, Mozilla Firefox, Google Chrome, Opera, etc.) to access HRHIS login screen provided that you are connected to the Internet.
 
 It is recommended to use Mozilla Firefox or Google Chrome. Internet Explorer is not advised to be used for accessing HRHIS, but if it is found necessary to use then, the latest version of the browser can be used). The HRHIS login page will appear as seen below,
 
@@ -61,7 +63,7 @@ It is recommended to use Mozilla Firefox or Google Chrome. Internet Explorer is 
 
 ## Apps Menu
 
-After successfully logging in HRHIS, you can access different applications in the system via the apps menu located at the top right hand Conner below the label that shows initials of users' full name as seen in figure below.
+After successfully logging in HRHIS, you can access different applications in the system via the apps menu located at the left hand side of the HRHIS window as seen in figure below.
 
 ![img alt](/images/apps.png)
 
