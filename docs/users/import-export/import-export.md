@@ -4,7 +4,7 @@ title: Import/Export Module
 sidebar_label: Import - Export
 ---
 
-This module allows users to enter massive data into the system. Two functions can be performed in import/export module.
+This module allows users to enter/export massive data into the system. Two functions can be performed in import/export module.
 
  1. Data import
  2. Data export
